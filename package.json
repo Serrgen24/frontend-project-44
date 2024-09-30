@@ -4,7 +4,8 @@
   "type": "module",
   "description": "[![Actions Status](https://github.com/Serrgen24/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Serrgen24/frontend-project-44/actions)",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +13,7 @@
   "author": "Serrgen",
   "license": "ISC",
   "dependencies": {
+    "getrandomnumber": "^1.0.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
