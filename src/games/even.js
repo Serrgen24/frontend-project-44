@@ -1,9 +1,12 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from 'getrandomnumber';
 
-import { name } from '../bin/brain-games.js';
+console.log('Welcome to the Brain Games!');
+// eslint-disable-next-line import/prefer-default-export
+export const name = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${name}!`);
 
-let count = 0;
+let gameCount = 0;
 
 const even = () => {
   const greetings = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -16,8 +19,8 @@ const even = () => {
 
   if (expectedAnswer === userAnswer) {
     console.log('Correct!');
-    count += 1;
-    if (count !== 3) {
+    gameCount += 1;
+    if (gameCount !== 3) {
       even();
     } else {
       console.log(`Congratulations, ${name}!`);
