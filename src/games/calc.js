@@ -1,17 +1,15 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from 'getrandomnumber';
 
-console.log('Welcome to the Brain Games!');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
+import { name } from '../index.js';
 
 let gameCount = 0;
 
 const calc = () => {
+  console.log('What is the result of the expression?');
   const sign = ['-', '+', '*'];
   const randSign = sign[getRandomNumber(0, 2)];
   const getRandNum = () => getRandomNumber(1, 20);
-
   const result = `${getRandNum()} ${randSign} ${getRandNum()}`;
   const expectedAnswer = eval(result);
 

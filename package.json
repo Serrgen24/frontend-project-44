@@ -14,6 +14,7 @@
   "author": "Serrgen",
   "license": "ISC",
   "dependencies": {
+    "@hexlet/pairs": "^1.1.1",
     "getrandomnumber": "^1.0.0",
     "readline-sync": "^1.4.10"
   },
@@ -28,9 +29,9 @@
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "globals": "^15.9.0",
-    "prettier": "3.3.3"
+    "globals": "^15.10.0",
+    "prettier": "^3.3.3"
   }
 }

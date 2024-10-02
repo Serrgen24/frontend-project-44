@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import even from '../src/games/even.js';
+import index from '../src/index.js';
 
-even();
+index();
