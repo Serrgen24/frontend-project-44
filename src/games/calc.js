@@ -25,7 +25,8 @@ const calc = () => {
       console.log(`Congratulations, ${name}!`);
     }
   } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'. \nLet's try again, ${name}!`);
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
+    console.log(`Let's try again, ${name}!`);
   }
 };
 export default calc;

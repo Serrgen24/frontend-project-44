@@ -3,5 +3,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/40c48d3197ca557d93e9/maintainability)](https://codeclimate.com/github/Serrgen24/frontend-project-44/maintainability)
 
 Game "Parity check" asciinema: https://asciinema.org/a/678254
-Games "Parity check" and "Calc" asciinema: https://asciinema.org/a/678578
-Games "Parity check", "Calc", "Gcd" asciinema: https://asciinema.org/a/678739
+Game "Calculator" asciinema: https://asciinema.org/a/678788
+Game "GCD" asсiinema: https://asciinema.org/a/678791
+Game "Arithmetic progression" asciinema: https://asciinema.org/a/678781
