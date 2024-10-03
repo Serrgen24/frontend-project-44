@@ -4,3 +4,4 @@
 
 Game "Parity check" asciinema: https://asciinema.org/a/678254
 Games "Parity check" and "Calc" asciinema: https://asciinema.org/a/678578
+Games "Parity check", "Calc", "Gcd" asciinema: https://asciinema.org/a/678739
