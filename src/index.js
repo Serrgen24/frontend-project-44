@@ -5,12 +5,16 @@ import gcd from './games/gcd.js';
 import progression from './games/progression.js';
 import prime from './games/prime.js';
 
-console.log('Welcome to the Brain Games!');
-console.log(`Hello, ${name}!`);
-//even();
-//calc();
-//gcd();
-//progression();
-prime();
-
 export { name };
+
+const startGame = () => {
+  console.log('Welcome to the Brain Games!');
+  console.log(`Hello, ${name}!`);
+  even();
+  calc();
+  gcd();
+  progression();
+  prime();
+};
+
+export default startGame;
