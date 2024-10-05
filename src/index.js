@@ -7,10 +7,10 @@ import prime from './games/prime.js';
 
 console.log('Welcome to the Brain Games!');
 console.log(`Hello, ${name}!`);
-even();
-calc();
-gcd();
-progression();
+//even();
+//calc();
+//gcd();
+//progression();
 prime();
 
 export { name };

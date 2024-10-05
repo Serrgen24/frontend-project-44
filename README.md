@@ -6,3 +6,4 @@ Game "Parity check" asciinema: https://asciinema.org/a/678254
 Game "Calculator" asciinema: https://asciinema.org/a/678788
 Game "GCD" asсiinema: https://asciinema.org/a/678791
 Game "Arithmetic progression" asciinema: https://asciinema.org/a/678781
+Game "Prime" asciinema: https://asciinema.org/a/679099
