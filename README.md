@@ -14,21 +14,21 @@
 
 Пример игры:
 
-  brain-progression
-  Welcome to the Brain Game!
-  What number is missing in the progression?
-  May I have your name? Roman
-  Hello, Roman!
-  Question: 14 .. 18 20 22 24 26 28
-  Your answer: 16 # Пользователь вводит ответ
-  Correct!
-  Question: 5 6 7 8 9 .. 11 12
-  Your answer: 10 # Пользователь вводит ответ
-  Correct!
-  Question: 12 15 18 21 .. 27 30 33
-  Your answer: 24 # Пользователь вводит ответ
-  Correct!
-  Congratulations, Roman!
+  `brain-progression`
+  `Welcome to the Brain Game!`
+  `What number is missing in the progression?`
+  `May I have your name? Roman`
+  `Hello, Roman!`
+  `Question: 14 .. 18 20 22 24 26 28`
+  `Your answer: 16 # Пользователь вводит ответ`
+  `Correct!`
+  `Question: 5 6 7 8 9 .. 11 12`
+  `Your answer: 10 # Пользователь вводит ответ`
+  `Correct!`
+  `Question: 12 15 18 21 .. 27 30 33`
+  `Your answer: 24 # Пользователь вводит ответ`
+  `Correct!`
+  `Congratulations, Roman!`
 
 ## Установка
 
@@ -42,7 +42,7 @@
 
   `$ brain-even`
 
-  ![Пример игры "Проверка на четность"](https://asciinema.org/a/678254)
+  [Пример игры "Проверка на четность"](https://asciinema.org/a/678254)
 
 ## Игра: "Калькулятор"
 
@@ -52,7 +52,7 @@
 
   `$ brain-calc`
 
-  ![Пример игры "Калькулятор"](https://asciinema.org/a/678788)
+  [Пример игры "Калькулятор"](https://asciinema.org/a/678788)
 
 ## Игра "НОД"
 
@@ -62,7 +62,7 @@
 
   `$ brain-gcd`
 
-  ![Пример игры "Наибольший общий делитель"](https://asciinema.org/a/678791)
+  [Пример игры "Наибольший общий делитель"](https://asciinema.org/a/678791)
 
 ## Игра "Арифметическая прогрессия"
 
@@ -70,9 +70,9 @@
 
   ### Запуск игры
 
-  `$ brain-gcd`
+  `$ brain-progression`
 
-  ![Пример игры "Арифметическая прогрессия"](https://asciinema.org/a/678781)
+  [Пример игры "Арифметическая прогрессия"](https://asciinema.org/a/678781)
 
 ## Игра "Простое ли число?"
 
@@ -82,4 +82,4 @@
 
   `$ brain-prime`
 
-  ![Пример игры "Простое ли число?"](https://asciinema.org/a/679099)
+  [Пример игры "Простое ли число?"](https://asciinema.org/a/679099)
