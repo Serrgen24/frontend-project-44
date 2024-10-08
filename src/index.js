@@ -5,8 +5,6 @@ import gcd from './games/gcd.js';
 import progression from './games/progression.js';
 import prime from './games/prime.js';
 
-export { name };
-
 const startGame = () => {
   console.log('Welcome to the Brain Games!');
   console.log(`Hello, ${name}!`);

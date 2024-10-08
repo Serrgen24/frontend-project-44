@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from 'getrandomnumber';
 
-import { name } from '../index.js';
+import { name } from '../utils/userName.js';
 
 let gameCount = 0;
 
