@@ -12,13 +12,11 @@ const index = () => {
   console.log(greetings);
 
   // ----------------- плохо работает -----------------
-  // -Shpongle - Ineffable Mysteries from Shpongleland-
   const func = () => {
     const res = gameEven();
     const num = res[0];
     const expectedAnswer = res[1];
     console.log(`Question: ${num}`);
-
     // ----------------- плохо работает -----------------
 
     const userAnswer = readlineSync.question('Your answer: ');
