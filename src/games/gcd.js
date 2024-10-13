@@ -1,3 +1,4 @@
+/*
 import readlineSync from 'readline-sync';
 import getRandomNumber from 'getrandomnumber';
 
@@ -38,3 +39,4 @@ const gcd = () => {
 };
 
 export default gcd;
+*/

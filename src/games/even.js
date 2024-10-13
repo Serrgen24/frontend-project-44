@@ -1,3 +1,17 @@
+import getRandNum from '../utils/rundNumber.js';
+
+const greetings = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const gameEven = () => {
+  const randNum = getRandNum();
+  const isEven = () => randNum % 2 === 0;
+  const expectedAnswer = isEven(randNum) ? 'yes' : 'no';
+  return [randNum, expectedAnswer];
+};
+
+export { gameEven, greetings };
+
+/*
 import readlineSync from 'readline-sync';
 import getRandomNumber from 'getrandomnumber';
 
@@ -29,3 +43,4 @@ const even = () => {
 };
 
 export default even;
+*/

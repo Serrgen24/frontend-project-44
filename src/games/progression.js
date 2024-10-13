@@ -1,3 +1,4 @@
+/*
 import readlineSync from 'readline-sync';
 import getRandomNumber from 'getrandomnumber';
 
@@ -40,3 +41,4 @@ const progression = () => {
 };
 
 export default progression;
+*/

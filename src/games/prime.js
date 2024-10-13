@@ -1,3 +1,4 @@
+/*
 import readlineSync from 'readline-sync';
 import getRandomNumber from 'getrandomnumber';
 
@@ -37,3 +38,4 @@ const prime = () => {
 };
 
 export default prime;
+*/

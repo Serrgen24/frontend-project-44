@@ -1,3 +1,4 @@
+/*
 import readlineSync from 'readline-sync';
 import getRandomNumber from 'getrandomnumber';
 
@@ -30,3 +31,4 @@ const calc = () => {
   }
 };
 export default calc;
+*/
