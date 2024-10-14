@@ -1,20 +1,12 @@
-/*
-import readlineSync from 'readline-sync';
-import getRandomNumber from 'getrandomnumber';
+import getRandNum from '../utils/rundNumber.js';
 
-import { name } from '../index.js';
+const greetings = 'Find the greatest common divisor of given numbers.';
 
-let gameCount = 0;
-
-const gcd = () => {
-  console.log('Find the greatest common divisor of given numbers.');
-  const getRandNum = () => getRandomNumber(1, 20);
+const gameGcd = () => {
+  const rundNum = getRandNum();
   const x = getRandNum();
   const y = getRandNum();
   const result = `${x} ${y}`;
-
-  console.log(`Question: ${result}`);
-  const userAnswer = Number(readlineSync.question('Your answer: '));
 
   const arr = [];
   for (let i = 1; i <= Math.min(x, y); i += 1) {
@@ -22,21 +14,10 @@ const gcd = () => {
       arr.push(i);
     }
   }
-  const expectedAnswer = arr.at(-1);
 
-  if (expectedAnswer === userAnswer) {
-    console.log('Correct!');
-    gameCount += 1;
-    if (gameCount !== 3) {
-      gcd();
-    } else {
-      console.log(`Congratulations, ${name}!`);
-    }
-  } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
-    console.log(`Let's try again, ${name}!`);
-  }
+  const expectedAnswer = arr.at(-1);
+  
+  return [result, expectedAnswer];
 };
 
-export default gcd;
-*/
+export { gameGcd, greetings };
