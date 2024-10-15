@@ -1,14 +1,11 @@
 import readlineSync from 'readline-sync';
 import getUserName from './utils/userName.js';
+
 // import { gameEven, greetings } from './games/even.js';
-// import { gameCalc, greetings } from './games/calc.js';
-// import { gameGcd, greetings } from './games/gcd.js';
-// import { gamePrime, greetings } from './games/prime.js';
-import { gameProgression, greetings } from './games/progression.js';
 
 let gameCount = 0;
 
-const index = () => {
+const index = (greetings, gameParams) => {
   console.log('Welcome to the Brain Games!');
   const userName = getUserName();
   console.log(`Hello, ${userName}!`);
@@ -17,17 +14,15 @@ const index = () => {
 
   // ----------------- плохо работает -----------------
   const func = () => {
-    const res = gameProgression();
-    const num = res[0];
-    const expectedAnswer = res[1];
+    const num = gameParams[0];
+    const expectedAnswer = gameParams[1];
     console.log(`Question: ${num}`);
     // ----------------- плохо работает -----------------
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    // ответ пользователя возвращает строку, поэтому пока использую == в условии
-    console.log('Correct!');
-    if (expectedAnswer == userAnswer) {
+    if (expectedAnswer === userAnswer) {
+      console.log('Correct!');
       gameCount += 1;
       if (gameCount !== 3) {
         func();
