@@ -15,7 +15,7 @@ const gamePrime = () => {
   };
 
   const expectedAnswer = isPrime();
-  
+
   return [result, expectedAnswer];
 };
 

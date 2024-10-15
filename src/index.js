@@ -1,6 +1,10 @@
 import readlineSync from 'readline-sync';
 import getUserName from './utils/userName.js';
-import { gameEven, greetings } from './games/even.js';
+// import { gameEven, greetings } from './games/even.js';
+// import { gameCalc, greetings } from './games/calc.js';
+// import { gameGcd, greetings } from './games/gcd.js';
+// import { gamePrime, greetings } from './games/prime.js';
+import { gameProgression, greetings } from './games/progression.js';
 
 let gameCount = 0;
 
@@ -13,7 +17,7 @@ const index = () => {
 
   // ----------------- плохо работает -----------------
   const func = () => {
-    const res = gameEven();
+    const res = gameProgression();
     const num = res[0];
     const expectedAnswer = res[1];
     console.log(`Question: ${num}`);
@@ -21,8 +25,9 @@ const index = () => {
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (expectedAnswer === userAnswer) {
-      console.log('Correct!');
+    // ответ пользователя возвращает строку, поэтому пока использую == в условии
+    console.log('Correct!');
+    if (expectedAnswer == userAnswer) {
       gameCount += 1;
       if (gameCount !== 3) {
         func();

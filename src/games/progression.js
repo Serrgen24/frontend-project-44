@@ -16,7 +16,7 @@ const gameProgression = () => {
 
   const randElemOfresult = getRandomNumber(0, result.length - 1);
   const expectedAnswer = Number(result.splice(randElemOfresult, 1, '..'));
-  
+
   return [result, expectedAnswer];
 };
 

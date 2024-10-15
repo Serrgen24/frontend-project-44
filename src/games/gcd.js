@@ -3,7 +3,6 @@ import getRandNum from '../utils/rundNumber.js';
 const greetings = 'Find the greatest common divisor of given numbers.';
 
 const gameGcd = () => {
-  const rundNum = getRandNum();
   const x = getRandNum();
   const y = getRandNum();
   const result = `${x} ${y}`;
@@ -16,7 +15,7 @@ const gameGcd = () => {
   }
 
   const expectedAnswer = arr.at(-1);
-  
+
   return [result, expectedAnswer];
 };
 

@@ -6,7 +6,7 @@ const gameEven = () => {
   const result = getRandNum();
   const isEven = () => result % 2 === 0;
   const expectedAnswer = isEven(result) ? 'yes' : 'no';
-  
+
   return [result, expectedAnswer];
 };
 
