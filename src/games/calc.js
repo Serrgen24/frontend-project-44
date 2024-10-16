@@ -8,6 +8,7 @@ const gameCalc = () => {
   const sign = ['-', '+', '*'];
   const randSign = sign[getRandomNumber(0, 2)];
   const result = `${getRandNum()} ${randSign} ${getRandNum()}`;
+  // eslint-disable-next-line no-eval
   const expectedAnswer = eval(result);
 
   return [result, expectedAnswer];
