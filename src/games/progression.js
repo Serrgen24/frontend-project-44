@@ -1,5 +1,6 @@
 import getRandomNumber from 'getrandomnumber';
 import getRandNum from '../utils/rundNumber.js';
+import index from '../index.js';
 
 const greetings = 'What number is missing in the progression?';
 
@@ -20,4 +21,8 @@ const gameProgression = () => {
   return [result, expectedAnswer];
 };
 
-export { gameProgression, greetings};
+const startGameProgression = () => {
+  index(greetings, gameProgression);
+};
+
+export default startGameProgression;

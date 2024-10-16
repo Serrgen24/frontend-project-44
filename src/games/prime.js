@@ -1,4 +1,5 @@
 import getRandNum from '../utils/rundNumber.js';
+import index from '../index.js';
 
 const greetings = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -19,4 +20,8 @@ const gamePrime = () => {
   return [result, expectedAnswer];
 };
 
-export { gamePrime, greetings };
+const startGamePrime = () => {
+  index(greetings, gamePrime);
+};
+
+export default startGamePrime;

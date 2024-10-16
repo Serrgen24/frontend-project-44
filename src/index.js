@@ -1,31 +1,25 @@
 import readlineSync from 'readline-sync';
 import getUserName from './utils/userName.js';
 
-// import { gameEven, greetings } from './games/even.js';
-
 let gameCount = 0;
 
 const index = (greetings, gameParams) => {
   console.log('Welcome to the Brain Games!');
   const userName = getUserName();
   console.log(`Hello, ${userName}!`);
-
   console.log(greetings);
 
-  // ----------------- плохо работает -----------------
-  const func = () => {
-    const num = gameParams[0];
-    const expectedAnswer = gameParams[1];
-    console.log(`Question: ${num}`);
-    // ----------------- плохо работает -----------------
+  const game = () => {
+    const params = gameParams();
+    const expectedAnswer = params[1].toString();
+    console.log(`Question: ${params[0]}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
-
     if (expectedAnswer === userAnswer) {
       console.log('Correct!');
       gameCount += 1;
       if (gameCount !== 3) {
-        func();
+        game();
       } else {
         console.log(`Congratulations, ${userName}!`);
       }
@@ -34,7 +28,7 @@ const index = (greetings, gameParams) => {
       console.log(`Let's try again, ${userName}!`);
     }
   };
-  func();
+  game();
 };
 
 export default index;

@@ -13,9 +13,7 @@ const gameEven = () => {
 };
 
 const startGameEven = () => {
-  index(greetings, gameEven());
+  index(greetings, gameEven);
 };
 
 export default startGameEven;
-
-// export { gameEven, greetings };

@@ -1,5 +1,6 @@
 import getRandomNumber from 'getrandomnumber';
 import getRandNum from '../utils/rundNumber.js';
+import index from '../index.js';
 
 const greetings = 'What is the result of the expression?';
 
@@ -12,4 +13,8 @@ const gameCalc = () => {
   return [result, expectedAnswer];
 };
 
-export { gameCalc, greetings };
+const startGameCalc = () => {
+  index(greetings, gameCalc);
+};
+
+export default startGameCalc;
