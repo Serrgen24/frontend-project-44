@@ -8,15 +8,17 @@ const gameProgression = () => {
   const start = getRandNum(); // начало прогрессии
   const n = getRandomNumber(1, 10); // шаг прогрессии
   const length = getRandomNumber(5, 10); // количество элементов прогрессии
-  const result = []; // массив прогрессии
+  const progression = []; // массив прогрессии
 
-  result[0] = start;
+  progression[0] = start;
   for (let i = 1; i <= length; i += 1) {
-    result[i] = result[i - 1] + n;
+    progression[i] = progression[i - 1] + n;
   }
 
-  const randElemOfresult = getRandomNumber(0, result.length - 1);
-  const expectedAnswer = Number(result.splice(randElemOfresult, 1, '..'));
+  const randElemOfresult = getRandomNumber(0, progression.length - 1);
+  const expectedAnswer = Number(progression.splice(randElemOfresult, 1, '..'));
+
+  const result = progression.join(' ');
 
   return [result, expectedAnswer];
 };
