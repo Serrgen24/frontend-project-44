@@ -1,11 +1,11 @@
 import index from '../index.js';
 
-import getRandNum from '../utils/rundNumber.js';
+import getRandNumber from '../utils/rundNumber.js';
 
 const greetings = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const gameEven = () => {
-  const result = getRandNum();
+  const result = getRandNumber();
   const isEven = () => result % 2 === 0;
   const expectedAnswer = isEven(result) ? 'yes' : 'no';
 

@@ -10,11 +10,11 @@ const index = (greetings, gameParams) => {
   console.log(greetings);
 
   const game = () => {
-    const params = gameParams();
-    const expectedAnswer = params[1].toString();
-    console.log(`Question: ${params[0]}`);
+    const [userQuestion, expectedAnswer] = gameParams();
+    console.log(`Question: ${userQuestion}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
+
     if (expectedAnswer === userAnswer) {
       console.log('Correct!');
       gameCount += 1;

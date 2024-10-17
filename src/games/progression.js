@@ -1,13 +1,12 @@
-import getRandomNumber from 'getrandomnumber';
-import getRandNum from '../utils/rundNumber.js';
+import getRandNumber from '../utils/rundNumber.js';
 import index from '../index.js';
 
 const greetings = 'What number is missing in the progression?';
 
 const gameProgression = () => {
-  const start = getRandNum(); // начало прогрессии
-  const n = getRandomNumber(1, 10); // шаг прогрессии
-  const length = getRandomNumber(5, 10); // количество элементов прогрессии
+  const start = getRandNumber(); // начало прогрессии
+  const n = getRandNumber(1, 10); // шаг прогрессии
+  const length = getRandNumber(5, 10); // количество элементов прогрессии
   const progression = []; // массив прогрессии
 
   progression[0] = start;
@@ -15,8 +14,8 @@ const gameProgression = () => {
     progression[i] = progression[i - 1] + n;
   }
 
-  const randElemOfresult = getRandomNumber(0, progression.length - 1);
-  const expectedAnswer = Number(progression.splice(randElemOfresult, 1, '..'));
+  const randElemOfresult = getRandNumber(0, progression.length - 1);
+  const expectedAnswer = progression.splice(randElemOfresult, 1, '..').toString();
 
   const result = progression.join(' ');
 

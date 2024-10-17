@@ -1,10 +1,10 @@
-import getRandNum from '../utils/rundNumber.js';
+import getRandNumber from '../utils/rundNumber.js';
 import index from '../index.js';
 
 const greetings = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const gamePrime = () => {
-  const result = getRandNum();
+  const result = getRandNumber();
 
   const isPrime = () => {
     for (let i = 2; i < result; i += 1) {

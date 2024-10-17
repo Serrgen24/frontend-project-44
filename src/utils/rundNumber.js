@@ -1,5 +1,6 @@
-import getRandomNumber from 'getrandomnumber';
+const getRandNumber = (min = 1, max = 30) => {
+  const randNumber = (Math.floor(Math.random() * (max - min + 1)) + min);
+  return randNumber;
+};
 
-const getRandNum = () => getRandomNumber(1, 40);
-
-export default getRandNum;
+export default getRandNumber;

@@ -4,6 +4,10 @@
 [![Actions Status](https://github.com/Serrgen24/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Serrgen24/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/40c48d3197ca557d93e9/maintainability)](https://codeclimate.com/github/Serrgen24/frontend-project-44/maintainability)
 
+Системные требования:  
+node version: 18.19.1  
+npm version: 10.9.9
+
 «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
 - Определение четного числа.
@@ -32,7 +36,7 @@
 
 ## Установка
 
-`$ sudo npm link`
+`$ npm ci`
 
 ## Игра "Проверка на четность" 
 
