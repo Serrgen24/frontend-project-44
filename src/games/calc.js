@@ -13,7 +13,7 @@ const getCalcData = () => {
   const randSign = sign[getRandNumber(arrayStartIndex, arrayEndIndex)];
   const mathExpression = `${x} ${randSign} ${y}`;
 
-  let result;
+  let result = 0;
   switch (randSign) {
     case '+':
       result = x + y;
