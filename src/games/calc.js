@@ -13,25 +13,22 @@ const getCalcData = () => {
   const randSign = sign[getRandNumber(arrayStartIndex, arrayEndIndex)];
   const mathExpression = `${x} ${randSign} ${y}`;
 
-  const calculateValue = () => {
-    let result;
-    switch (randSign) {
-      case '+':
-        result = x + y;
-        break;
-      case '-':
-        result = x - y;
-        break;
-      case '*':
-        result = x * y;
-        break;
-      default:
+  let result;
+  switch (randSign) {
+    case '+':
+      result = x + y;
+      break;
+    case '-':
+      result = x - y;
+      break;
+    case '*':
+      result = x * y;
+      break;
+    default:
         // ничего не выполняем
-    }
-    return result;
-  };
+  }
 
-  const expectedAnswer = calculateValue().toString();
+  const expectedAnswer = result.toString();
 
   return [mathExpression, expectedAnswer];
 };
