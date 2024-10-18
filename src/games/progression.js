@@ -7,7 +7,7 @@ const getProgressionData = () => {
   const start = getRandNumber(); // начало прогрессии
   const n = getRandNumber(1, 10); // шаг прогрессии от 1 до 10
   const length = getRandNumber(5, 10); // количество элементов прогрессии минимум 5, максимум 10
-  const progression = []; // массив прогрессии
+  const progression = [];
 
   const getProgression = () => {
     progression[0] = start;
@@ -18,8 +18,8 @@ const getProgressionData = () => {
   getProgression();
 
   const randElemOfresult = getRandNumber(0, progression.length - 1);
-  const expectedAnswer = progression.splice(randElemOfresult, 1, '..').toString();
-
+  const deleteCount = 1;
+  const expectedAnswer = progression.splice(randElemOfresult, deleteCount, '..').toString();
   const result = progression.join(' ');
 
   return [result, expectedAnswer];

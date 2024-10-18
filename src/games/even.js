@@ -4,11 +4,13 @@ import getRandNumber from '../utils/rundNumber.js';
 const greetings = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getEvenData = () => {
-  const result = getRandNumber();
-  const isEven = () => result % 2 === 0;
-  const expectedAnswer = isEven(result) ? 'yes' : 'no';
+  const randNumber = getRandNumber();
+  const evenDivisor = 2;
 
-  return [result, expectedAnswer];
+  const isEven = () => randNumber % evenDivisor === 0;
+  const expectedAnswer = isEven(randNumber) ? 'yes' : 'no';
+
+  return [randNumber, expectedAnswer];
 };
 
 const startGameEven = () => {
