@@ -15,9 +15,10 @@ const getPrimeData = () => {
     return true;
   };
 
-  const expectedAnswer = isPrime() ? 'yes' : 'no';
+  const result = isPrime() ? 'yes' : 'no';
+  const expectedAnswer = result.toString();
 
-  return [randNumber, expectedAnswer.toString()];
+  return [randNumber, expectedAnswer];
 };
 
 const startGamePrime = () => {
