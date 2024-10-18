@@ -1,7 +1,7 @@
 import getRandNumber from '../utils/rundNumber.js';
 import startGame from '../index.js';
 
-const greetings = 'What is the expectedAnswer of the expression?';
+const greetings = 'What is the result of the expression?';
 
 const getCalcData = () => {
   const sign = ['+', '-', '*'];
@@ -13,22 +13,25 @@ const getCalcData = () => {
   const randSign = sign[getRandNumber(arrayStartIndex, arrayEndIndex)];
   const mathExpression = `${x} ${randSign} ${y}`;
 
-  let result = 0;
-  switch (randSign) {
-    case '+':
-      result = x + y;
-      break;
-    case '-':
-      result = x - y;
-      break;
-    case '*':
-      result = x * y;
-      break;
-    default:
+  const calculateExpression = () => {
+    let result;
+    switch (randSign) {
+      case '+':
+        result = x + y;
+        break;
+      case '-':
+        result = x - y;
+        break;
+      case '*':
+        result = x * y;
+        break;
+      default:
         // ничего не выполняем
-  }
+    }
+    return result;
+  };
 
-  const expectedAnswer = result.toString();
+  const expectedAnswer = calculateExpression().toString();
 
   return [mathExpression, expectedAnswer];
 };
