@@ -3,13 +3,13 @@ import getUserName from './utils/userName.js';
 
 let gameCount = 0;
 
-const index = (greetings, gameParams) => {
+const startGame = (greetings, gameParams) => {
   console.log('Welcome to the Brain Games!');
   const userName = getUserName();
   console.log(`Hello, ${userName}!`);
   console.log(greetings);
 
-  const game = () => {
+  const checkGameConditions = () => {
     const [userQuestion, expectedAnswer] = gameParams();
     console.log(`Question: ${userQuestion}`);
 
@@ -19,7 +19,7 @@ const index = (greetings, gameParams) => {
       console.log('Correct!');
       gameCount += 1;
       if (gameCount !== 3) {
-        game();
+        checkGameConditions();
       } else {
         console.log(`Congratulations, ${userName}!`);
       }
@@ -28,7 +28,7 @@ const index = (greetings, gameParams) => {
       console.log(`Let's try again, ${userName}!`);
     }
   };
-  game();
+  checkGameConditions();
 };
 
-export default index;
+export default startGame;

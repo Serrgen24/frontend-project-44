@@ -1,10 +1,9 @@
-import index from '../index.js';
-
+import startGame from '../index.js';
 import getRandNumber from '../utils/rundNumber.js';
 
 const greetings = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const gameEven = () => {
+const getEvenData = () => {
   const result = getRandNumber();
   const isEven = () => result % 2 === 0;
   const expectedAnswer = isEven(result) ? 'yes' : 'no';
@@ -13,7 +12,7 @@ const gameEven = () => {
 };
 
 const startGameEven = () => {
-  index(greetings, gameEven);
+  startGame(greetings, getEvenData);
 };
 
 export default startGameEven;

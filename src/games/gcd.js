@@ -1,9 +1,9 @@
 import getRandNumber from '../utils/rundNumber.js';
-import index from '../index.js';
+import startGame from '../index.js';
 
 const greetings = 'Find the greatest common divisor of given numbers.';
 
-const gameGcd = () => {
+const getGcdData = () => {
   const x = getRandNumber();
   const y = getRandNumber();
   const result = `${x} ${y}`;
@@ -25,7 +25,7 @@ const gameGcd = () => {
 };
 
 const startGameGcd = () => {
-  index(greetings, gameGcd);
+  startGame(greetings, getGcdData);
 };
 
 export default startGameGcd;
