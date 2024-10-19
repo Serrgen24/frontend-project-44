@@ -1,21 +1,28 @@
 import getRandNumber from '../utils/rundNumber.js';
 import startGame from '../index.js';
 
-const greetings = 'What number is missing in the progression?';
+const gameProgressionRule = 'What number is missing in the progression?';
+
+const getProgression = (progression, start, n, length) => {
+  const arrayOfProgression = progression;
+  arrayOfProgression[0] = start;
+  for (let i = 1; i <= length; i += 1) {
+    arrayOfProgression[i] = progression[i - 1] + n;
+  }
+  return arrayOfProgression;
+};
 
 const getProgressionData = () => {
-  const start = getRandNumber(); // начало прогрессии
-  const n = getRandNumber(1, 10); // шаг прогрессии от 1 до 10
-  const length = getRandNumber(5, 10); // количество элементов прогрессии минимум 5, максимум 10
+  const progressionStart = 2;
+  const progressionEnd = 10;
+  const minProgressionElems = 5;
+  const maxProgressionElems = 10;
+  const start = getRandNumber();
+  const n = getRandNumber(progressionStart, progressionEnd);
+  const length = getRandNumber(minProgressionElems, maxProgressionElems);
   const progression = [];
 
-  const getProgression = () => {
-    progression[0] = start;
-    for (let i = 1; i <= length; i += 1) {
-      progression[i] = progression[i - 1] + n;
-    }
-  };
-  getProgression();
+  getProgression(progression, start, n, length);
 
   const randElemOfresult = getRandNumber(0, progression.length - 1);
   const deleteCount = 1;
@@ -26,7 +33,7 @@ const getProgressionData = () => {
 };
 
 const startGameProgression = () => {
-  startGame(greetings, getProgressionData);
+  startGame(gameProgressionRule, getProgressionData);
 };
 
 export default startGameProgression;
