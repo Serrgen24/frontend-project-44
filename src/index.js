@@ -25,7 +25,7 @@ const startGame = (gameRule, getGameParams) => {
     }
 
     if (gameCount === i) {
-      console.log(`Congratulations, ${userName}`);
+      console.log(`Congratulations, ${userName}!`);
     }
   }
 };
