@@ -3,13 +3,13 @@ import startGame from '../index.js';
 
 const gameProgressionRule = 'What number is missing in the progression?';
 
-const getProgression = (progression, start, n, length) => {
-  const arrayOfProgression = progression;
-  arrayOfProgression[0] = start;
+const getProgression = (start, n, length) => {
+  const progression = [];
+  progression[0] = start;
   for (let i = 1; i <= length; i += 1) {
-    arrayOfProgression[i] = progression[i - 1] + n;
+    progression[i] = progression[i - 1] + n;
   }
-  return arrayOfProgression;
+  return progression;
 };
 
 const getProgressionData = () => {
@@ -20,14 +20,13 @@ const getProgressionData = () => {
   const start = getRandNumber();
   const n = getRandNumber(progressionStart, progressionEnd);
   const length = getRandNumber(minProgressionElems, maxProgressionElems);
-  const progression = [];
 
-  getProgression(progression, start, n, length);
+  const arrOfProgression = getProgression(start, n, length);
 
-  const randElemOfresult = getRandNumber(0, progression.length - 1);
+  const randElemOfresult = getRandNumber(0, length - 1);
   const deleteCount = 1;
-  const expectedAnswer = progression.splice(randElemOfresult, deleteCount, '..').toString();
-  const result = progression.join(' ');
+  const expectedAnswer = arrOfProgression.splice(randElemOfresult, deleteCount, '..').toString();
+  const result = arrOfProgression.join(' ');
 
   return [result, expectedAnswer];
 };

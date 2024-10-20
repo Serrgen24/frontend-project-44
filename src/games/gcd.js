@@ -3,8 +3,8 @@ import startGame from '../index.js';
 
 const gameGcdRule = 'Find the greatest common divisor of given numbers.';
 
-let answer = 0;
 const getGcd = (x, y) => {
+  let answer = 0;
   for (let i = 1; i <= Math.min(x, y); i += 1) {
     if (x % i === 0 && y % i === 0) {
       answer = i;
@@ -18,8 +18,7 @@ const getGcdData = () => {
   const y = getRandNumber();
   const result = `${x} ${y}`;
 
-  getGcd(x, y);
-  const expectedAnswer = answer.toString();
+  const expectedAnswer = getGcd(x, y).toString();
 
   return [result, expectedAnswer];
 };

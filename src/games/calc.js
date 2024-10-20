@@ -4,27 +4,22 @@ import startGame from '../index.js';
 const gameCalcRule = 'What is the result of the expression?';
 
 const getExpressionResult = (randSign, x, y) => {
-  let result;
   switch (randSign) {
     case '+':
-      result = x + y;
-      break;
+      return x + y;
     case '-':
-      result = x - y;
-      break;
+      return x - y;
     case '*':
-      result = x * y;
-      break;
+      return x * y;
     default:
-      // ничего не выполняем
+      throw new Error(`Unknown order state: '${(randSign, x, y).state}'!`);
   }
-  return result;
 };
 
 const getCalcData = () => {
   const sign = ['+', '-', '*'];
   const arrayStartIndex = 0;
-  const arrayEndIndex = 2;
+  const arrayEndIndex = sign.length - 1;
 
   const x = getRandNumber();
   const y = getRandNumber();

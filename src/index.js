@@ -16,18 +16,13 @@ const startGame = (gameRule, getGameParams) => {
 
     if (userAnswer === expectedAnswer) {
       console.log('Correct!');
-    }
-
-    if (userAnswer !== expectedAnswer) {
+    } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
-
-    if (gameCount === i) {
-      console.log(`Congratulations, ${userName}!`);
-    }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default startGame;
