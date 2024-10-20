@@ -4,13 +4,12 @@ import startGame from '../index.js';
 const gameGcdRule = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (x, y) => {
-  let answer = 0;
-  for (let i = 1; i <= Math.min(x, y); i += 1) {
+  for (let i = Math.min(x, y); i >= 1; i -= 1) {
     if (x % i === 0 && y % i === 0) {
-      answer = i;
+      return i;
     }
   }
-  return answer;
+  return 1;
 };
 
 const getGcdData = () => {
